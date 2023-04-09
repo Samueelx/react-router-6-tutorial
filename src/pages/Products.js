@@ -5,6 +5,7 @@ const Products = () => {
   return (
     <>
       <section className='section'>
+        <div className="products">
        {products.map(product => {
         return (
           <article key={product.id}>
@@ -13,6 +14,7 @@ const Products = () => {
           </article>
         )
        })}
+       </div>
       </section>
     </>
   );
