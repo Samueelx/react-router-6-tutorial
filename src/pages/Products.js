@@ -1,11 +1,18 @@
 import { Link } from "react-router-dom";
+import products from "../data";
 
 const Products = () => {
   return (
     <>
       <section className='section'>
-        <h2>products</h2>
-        <Link to="/" className="btn">Back Home</Link>
+       {products.map(product => {
+        return (
+          <article key={product.id}>
+            <h2>{product.name}</h2>
+            <Link to={`/products/${product.id}`}>More info</Link>
+          </article>
+        )
+       })}
       </section>
     </>
   );
